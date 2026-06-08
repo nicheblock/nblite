@@ -1,0 +1,272 @@
+<!DOCTYPE html><html><head><title>gn-math v1</title><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+<style>:root { --banner: #f50000; --text: #ffffff; --card-size: 180px; --accent: #5986da; --font-family: 'Inter', sans-serif; }
+body { font-family: var(--font-family); color: var(--text); margin: 0; background-image: none; background-color: rgb(0, 0, 0); background-attachment: fixed; }
+.top-bar { background: var(--banner); padding: 10px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); min-height: 75px; gap: 20px; }
+.fx-shiny { background: linear-gradient(to right, var(--text) 20%, var(--accent) 40%, var(--accent) 60%, var(--text) 80%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shine 3s linear infinite; }
+@keyframes shine { to { background-position: 200% center; } }
+.fx-animated { animation: float 3s ease-in-out infinite; display: inline-block; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+.logo-left { order: 1; margin-right: auto; } .logo-right { order: 5; margin-left: auto; }
+#grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--card-size), 1fr)); gap: 20px; padding: 30px; }
+.game-card { background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; aspect-ratio: 1/1.1; display: flex; flex-direction: column; cursor: pointer; transition: 0.3s;}
+.card-img { flex-grow: 1; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 900; color: var(--accent); background-color: rgba(0,0,0,0.3); }
+.card-footer { background: rgba(0,0,0,0.7); padding: 12px; font-size: 0.9rem; font-weight: bold; text-align: center; }
+#grid.button-mode { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+#grid.button-mode .game-card { aspect-ratio: auto; padding: 14px; justify-content: center; min-height: 48px; }
+#grid.button-mode .card-img { display: none; }
+#grid.button-mode .card-footer { background: transparent; padding: 0; text-align: center; }
+</style></head><body>
+<div class="top-bar">
+    
+    <div style="display:flex; flex-direction:column; order:2;">
+        <div class="fx-animated" style="font-weight:900; font-size:22px; text-transform:uppercase;">gn-math v1</div>
+        
+    </div>
+    <div style="flex-grow:1; max-width:400px; display:flex; align-items:center; gap:10px; order:3;">
+        <input type="text" placeholder="Search..." oninput="s(this.value)" style="border-radius:20px; background:rgba(255,255,255,0.1); padding:8px 15px; border:1px solid rgba(255,255,255,0.2); color:white; width:100%;">
+    </div>
+</div>
+<div id="grid" class="button-mode"><div class="game-card">
+            <div class="card-img" style="">1</div>
+            <div class="card-footer">1</div></div><div class="game-card">
+            <div class="card-img" style="">1</div>
+            <div class="card-footer">1 on 1 Soccer</div></div><div class="game-card">
+            <div class="card-img" style="">1</div>
+            <div class="card-footer">10 Minutes Till Dawn</div></div><div class="game-card">
+            <div class="card-img" style="">1</div>
+            <div class="card-footer">10 More Bullets</div></div><div class="game-card">
+            <div class="card-img" style="">1</div>
+            <div class="card-footer">10 Yard Fight</div></div><div class="game-card">
+            <div class="card-img" style="">1</div>
+            <div class="card-footer">100 Rooms of Enemies</div></div><div class="game-card">
+            <div class="card-img" style="">1</div>
+            <div class="card-footer">12 Mini Battles</div></div><div class="game-card">
+            <div class="card-img" style="">1</div>
+            <div class="card-footer">13 Bones</div></div><div class="game-card">
+            <div class="card-img" style="">1</div>
+            <div class="card-footer">1v1.LoL</div></div><div class="game-card">
+            <div class="card-img" style="">2</div>
+            <div class="card-footer">2048</div></div><div class="game-card">
+            <div class="card-img" style="">9</div>
+            <div class="card-footer">9007188254740992</div></div><div class="game-card">
+            <div class="card-img" style="">A</div>
+            <div class="card-footer">A Small World Cup</div></div><div class="game-card">
+            <div class="card-img" style="">A</div>
+            <div class="card-footer">Agar.io Lite</div></div><div class="game-card">
+            <div class="card-img" style="">A</div>
+            <div class="card-footer">Angry Birds</div></div><div class="game-card">
+            <div class="card-img" style="">A</div>
+            <div class="card-footer">Animal Crossing</div></div><div class="game-card">
+            <div class="card-img" style="">A</div>
+            <div class="card-footer">Aquapark.io</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Bank Robbery</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Basket Bros</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Basket Random</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Basket Random Good</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Basket Slam Dunk 2</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Basketball Legends</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Basketball Stars</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Basketball Superstars</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Basketbattle</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Batter Up</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Battle Karts</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Battles</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Block Blast</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Bloons TD 1</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Bloons TD 2</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Bloons TD 3</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Bloons TD 4</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Bloons TD 5</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">BMX 2</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Bonzana Bros</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Brawlstars</div></div><div class="game-card">
+            <div class="card-img" style="">B</div>
+            <div class="card-footer">Brotato</div></div><div class="game-card">
+            <div class="card-img" style="">C</div>
+            <div class="card-footer">C.S 1.6</div></div><div class="game-card">
+            <div class="card-img" style="">C</div>
+            <div class="card-footer">Call of Duty: Modern Warfare</div></div><div class="game-card">
+            <div class="card-img" style="">C</div>
+            <div class="card-footer">Celeste</div></div><div class="game-card">
+            <div class="card-img" style="">C</div>
+            <div class="card-footer">Clover</div></div><div class="game-card">
+            <div class="card-img" style="">C</div>
+            <div class="card-footer">Cookie Clicker</div></div><div class="game-card">
+            <div class="card-img" style="">C</div>
+            <div class="card-footer">Cookie Clicker Back-up 2</div></div><div class="game-card">
+            <div class="card-img" style="">C</div>
+            <div class="card-footer">Cookie Clicker Back-up 3</div></div><div class="game-card">
+            <div class="card-img" style="">C</div>
+            <div class="card-footer">Cookie Clicker Backup</div></div><div class="game-card">
+            <div class="card-img" style="">C</div>
+            <div class="card-footer">Cookie Clicker with mods</div></div><div class="game-card">
+            <div class="card-img" style="">C</div>
+            <div class="card-footer">Cooking Mama</div></div><div class="game-card">
+            <div class="card-img" style="">C</div>
+            <div class="card-footer">Cooking Mama 2</div></div><div class="game-card">
+            <div class="card-img" style="">D</div>
+            <div class="card-footer">Doom</div></div><div class="game-card">
+            <div class="card-img" style="">D</div>
+            <div class="card-footer">Doom 2</div></div><div class="game-card">
+            <div class="card-img" style="">D</div>
+            <div class="card-footer">Doom 2: DOS</div></div><div class="game-card">
+            <div class="card-img" style="">D</div>
+            <div class="card-footer">Doom 2D</div></div><div class="game-card">
+            <div class="card-img" style="">D</div>
+            <div class="card-footer">Doom 2D: DOS</div></div><div class="game-card">
+            <div class="card-img" style="">E</div>
+            <div class="card-footer">Eaglercraft Beta 1.3 Offline</div></div><div class="game-card">
+            <div class="card-img" style="">E</div>
+            <div class="card-footer">Eaglercraft Indev Offline</div></div><div class="game-card">
+            <div class="card-img" style="">E</div>
+            <div class="card-footer">Escape Road</div></div><div class="game-card">
+            <div class="card-img" style="">E</div>
+            <div class="card-footer">Escape Road 3</div></div><div class="game-card">
+            <div class="card-img" style="">E</div>
+            <div class="card-footer">Every game</div></div><div class="game-card">
+            <div class="card-img" style="">F</div>
+            <div class="card-footer">FIFA 07</div></div><div class="game-card">
+            <div class="card-img" style="">F</div>
+            <div class="card-footer">FIFA 10</div></div><div class="game-card">
+            <div class="card-img" style="">F</div>
+            <div class="card-footer">FIFA 11</div></div><div class="game-card">
+            <div class="card-img" style="">F</div>
+            <div class="card-footer">FIFA 2000</div></div><div class="game-card">
+            <div class="card-img" style="">F</div>
+            <div class="card-footer">Five Night's at Epsteins</div></div><div class="game-card">
+            <div class="card-img" style="">F</div>
+            <div class="card-footer">Five Night's at Freddy's 2</div></div><div class="game-card">
+            <div class="card-img" style="">F</div>
+            <div class="card-footer">Five Night's at Freddy's 3</div></div><div class="game-card">
+            <div class="card-img" style="">F</div>
+            <div class="card-footer">Five Night's at Shrek's</div></div><div class="game-card">
+            <div class="card-img" style="">F</div>
+            <div class="card-footer">Five Nights at Baldi's</div></div><div class="game-card">
+            <div class="card-img" style="">F</div>
+            <div class="card-footer">Five Nights at Freddy's</div></div><div class="game-card">
+            <div class="card-img" style="">F</div>
+            <div class="card-footer">Five Nights at Freddy's 4</div></div><div class="game-card">
+            <div class="card-img" style="">F</div>
+            <div class="card-footer">Five Nights at Frickbears</div></div><div class="game-card">
+            <div class="card-img" style="">G</div>
+            <div class="card-footer">Geometry Dash Wave</div></div><div class="game-card">
+            <div class="card-img" style="">H</div>
+            <div class="card-footer">Helios</div></div><div class="game-card">
+            <div class="card-img" style="">I</div>
+            <div class="card-footer">Ice Dodo</div></div><div class="game-card">
+            <div class="card-img" style="">L</div>
+            <div class="card-footer">Legacy of Goku</div></div><div class="game-card">
+            <div class="card-img" style="">M</div>
+            <div class="card-footer">Mario is Missing Done Right</div></div><div class="game-card">
+            <div class="card-img" style="">M</div>
+            <div class="card-footer">Mario Party Advance</div></div><div class="game-card">
+            <div class="card-img" style="">M</div>
+            <div class="card-footer">Marvel Superheroes Arcade</div></div><div class="game-card">
+            <div class="card-img" style="">M</div>
+            <div class="card-footer">Marvel vs Capcom PS1</div></div><div class="game-card">
+            <div class="card-img" style="">M</div>
+            <div class="card-footer">Max Payne</div></div><div class="game-card">
+            <div class="card-img" style="">M</div>
+            <div class="card-footer">Minecraft Tower Defense</div></div><div class="game-card">
+            <div class="card-img" style="">P</div>
+            <div class="card-footer">Pinkbike</div></div><div class="game-card">
+            <div class="card-img" style="">P</div>
+            <div class="card-footer">Pokemon Emerald Rouge</div></div><div class="game-card">
+            <div class="card-img" style="">P</div>
+            <div class="card-footer">Pokemon Emerald Rush Edition</div></div><div class="game-card">
+            <div class="card-img" style="">P</div>
+            <div class="card-footer">Pokemon Rocket Edition</div></div><div class="game-card">
+            <div class="card-img" style="">P</div>
+            <div class="card-footer">Pokemon Running Steel</div></div><div class="game-card">
+            <div class="card-img" style="">P</div>
+            <div class="card-footer">Pokemon Trade & Stache</div></div><div class="game-card">
+            <div class="card-img" style="">P</div>
+            <div class="card-footer">Pokemon Two</div></div><div class="game-card">
+            <div class="card-img" style="">P</div>
+            <div class="card-footer">Pou</div></div><div class="game-card">
+            <div class="card-img" style="">Q</div>
+            <div class="card-footer">Quantum Clicker</div></div><div class="game-card">
+            <div class="card-img" style="">R</div>
+            <div class="card-footer">Ragdoll Hit</div></div><div class="game-card">
+            <div class="card-img" style="">R</div>
+            <div class="card-footer">Redball 4</div></div><div class="game-card">
+            <div class="card-img" style="">R</div>
+            <div class="card-footer">Retro Bowl</div></div><div class="game-card">
+            <div class="card-img" style="">R</div>
+            <div class="card-footer">Retro Bowl College</div></div><div class="game-card">
+            <div class="card-img" style="">R</div>
+            <div class="card-footer">Rocket Jump</div></div><div class="game-card">
+            <div class="card-img" style="">R</div>
+            <div class="card-footer">RocketGoal.io</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Slope</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Slope 2 Player</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Slope 3</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">SM64 Land</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Snowbros</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Snowrider 3d</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Soccer Bros</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Soccer Random</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Solar Sandbox</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Solar Smash</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Stickman Hook</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Subway Surfers: Barcelona</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Subway Surfers: Beijing</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Subway Surfers: Berlin</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Subway Surfers: Buenos Aires</div></div><div class="game-card">
+            <div class="card-img" style="">S</div>
+            <div class="card-footer">Subway Surfers: Havana</div></div><div class="game-card">
+            <div class="card-img" style="">T</div>
+            <div class="card-footer">Trollface Quest</div></div></div>
+<div id="sections-container" style="display:none"><input type="button" value="cl1" style="display:none;"><input type="button" value="cl1on1soccer" style="display:none;"><input type="button" value="cl10minutestildawn" style="display:none;"><input type="button" value="cl10morebullets" style="display:none;"><input type="button" value="cl10yardfight" style="display:none;"><input type="button" value="cl100RoomsOfEnemies" style="display:none;"><input type="button" value="cl12minibattles" style="display:none;"><input type="button" value="cl13bones" style="display:none;"><input type="button" value="cl1v1lol" style="display:none;"><input type="button" value="cl2048" style="display:none;"><input type="button" value="cl9007199254740992" style="display:none;"><input type="button" value="clasmallworldcup" style="display:none;"><input type="button" value="clagariolite" style="display:none;"><input type="button" value="clangrybirds" style="display:none;"><input type="button" value="clanimalcrossing" style="display:none;"><input type="button" value="claquaparkio" style="display:none;"><input type="button" value="clBank Robbery" style="display:none;"><input type="button" value="clbasketbros" style="display:none;"><input type="button" value="clbasketrandom" style="display:none;"><input type="button" value="clbasketrandomgood" style="display:none;"><input type="button" value="clbasketslamdunk2" style="display:none;"><input type="button" value="clbasketballlegends(1)" style="display:none;"><input type="button" value="clbasketballstars" style="display:none;"><input type="button" value="clbasketballsuperstars" style="display:none;"><input type="button" value="clbasketbattle" style="display:none;"><input type="button" value="clbatterup" style="display:none;"><input type="button" value="clbattlekarts" style="display:none;"><input type="button" value="clbattles" style="display:none;"><input type="button" value="clblockblast" style="display:none;"><input type="button" value="clBTD1" style="display:none;"><input type="button" value="clbloonsTD2" style="display:none;"><input type="button" value="clbloonsTD3" style="display:none;"><input type="button" value="clbloonsTD4" style="display:none;"><input type="button" value="clbloonsTD5" style="display:none;"><input type="button" value="clBMX2" style="display:none;"><input type="button" value="clBonanza-Bros" style="display:none;"><input type="button" value="clBrawlstars" style="display:none;"><input type="button" value="clbrotato" style="display:none;"><input type="button" value="clcs16" style="display:none;"><input type="button" value="clcodmodernwarfare" style="display:none;"><input type="button" value="clceleste" style="display:none;"><input type="button" value="clclover" style="display:none;"><input type="button" value="clcookie-clicker" style="display:none;"><input type="button" value="clcookieclickercool" style="display:none;"><input type="button" value="clcookieclickergood" style="display:none;"><input type="button" value="clcookieclicker" style="display:none;"><input type="button" value="clcookieclickermodmenu" style="display:none;"><input type="button" value="clcookingmama" style="display:none;"><input type="button" value="clcookingmama2" style="display:none;"><input type="button" value="cldoom" style="display:none;"><input type="button" value="cldoom2" style="display:none;"><input type="button" value="cldoom2dos" style="display:none;"><input type="button" value="cldoom2d" style="display:none;"><input type="button" value="cldoom2dDOS" style="display:none;"><input type="button" value="clEaglercraft-Beta-1.3-Offline" style="display:none;"><input type="button" value="clEaglercraft-Indev-Offline" style="display:none;"><input type="button" value="clescaperoad" style="display:none;"><input type="button" value="clescaperoad3" style="display:none;"><input type="button" value="clSINGLEFILE" style="display:none;"><input type="button" value="clFIFA07" style="display:none;"><input type="button" value="clFIFA10" style="display:none;"><input type="button" value="clFIFA11" style="display:none;"><input type="button" value="clFIFA2000(1)" style="display:none;"><input type="button" value="clfivenightsatepsteins" style="display:none;"><input type="button" value="clFNAF2" style="display:none;"><input type="button" value="clFNAF3" style="display:none;"><input type="button" value="clfivenightsatshreks" style="display:none;"><input type="button" value="clfivenightsatbaldisredone" style="display:none;"><input type="button" value="clFNAF" style="display:none;"><input type="button" value="clFNAF4" style="display:none;"><input type="button" value="clfivenightsatfrickbears3" style="display:none;"><input type="button" value="clGeometryDashWave" style="display:none;"><input type="button" value="clHelios-Offline" style="display:none;"><input type="button" value="clicedodo" style="display:none;"><input type="button" value="clLegacyOfGoku" style="display:none;"><input type="button" value="clMarioisMissingDoneRight" style="display:none;"><input type="button" value="clMario Party Advance" style="display:none;"><input type="button" value="clMarvelSuperHeroesArcade" style="display:none;"><input type="button" value="clMarvelVsCapcomPS1" style="display:none;"><input type="button" value="clmaxpayne" style="display:none;"><input type="button" value="clMINECRAFTTOWERDEFENSE" style="display:none;"><input type="button" value="clpinkbike" style="display:none;"><input type="button" value="clPokemonemeraldrouge" style="display:none;"><input type="button" value="clPok�mon Emerald Rush Edition (20)" style="display:none;"><input type="button" value="clPokemonrocketedition" style="display:none;"><input type="button" value="clPok�monstunningsteel" style="display:none;"><input type="button" value="clPok�mon Trade&_Stache (V11)" style="display:none;"><input type="button" value="clPok�mon TWO (v11)" style="display:none;"><input type="button" value="clPou" style="display:none;"><input type="button" value="clQuantumClicker" style="display:none;"><input type="button" value="clragdollhit" style="display:none;"><input type="button" value="clRedBall4" style="display:none;"><input type="button" value="clretrobowl" style="display:none;"><input type="button" value="clretrobowlcollege" style="display:none;"><input type="button" value="clrocketjump" style="display:none;"><input type="button" value="clrocketgoalio" style="display:none;"><input type="button" value="clslope" style="display:none;"><input type="button" value="clslope2player" style="display:none;"><input type="button" value="clslope3" style="display:none;"><input type="button" value="clSM64Land" style="display:none;"><input type="button" value="clsnowbros" style="display:none;"><input type="button" value="clsnowrider" style="display:none;"><input type="button" value="clsoccerbros" style="display:none;"><input type="button" value="clsoccerrandom" style="display:none;"><input type="button" value="clsolarsandbox" style="display:none;"><input type="button" value="clsolarsmash" style="display:none;"><input type="button" value="clstickmanhook" style="display:none;"><input type="button" value="clsubwaysurfersbarcelona" style="display:none;"><input type="button" value="clsubwaysurfersbeijing" style="display:none;"><input type="button" value="clsubwaysurfersberlin" style="display:none;"><input type="button" value="clsubwaysurfersbuenosaires" style="display:none;"><input type="button" value="clsubwaysurfershavana" style="display:none;"><input type="button" value="cltrollfacequest2" style="display:none;"></div>
+<script src="https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/games.js"></script>
+<script>
+const data = [{"name":"1","img":"","type":"git","file":"cl1"},{"name":"1 on 1 Soccer","img":"","type":"git","file":"cl1on1soccer"},{"name":"10 Minutes Till Dawn","img":"","type":"git","file":"cl10minutestildawn"},{"name":"10 More Bullets","img":"","type":"git","file":"cl10morebullets"},{"name":"10 Yard Fight","img":"","type":"git","file":"cl10yardfight"},{"name":"100 Rooms of Enemies","img":"","type":"git","file":"cl100RoomsOfEnemies"},{"name":"12 Mini Battles","img":"","type":"git","file":"cl12minibattles"},{"name":"13 Bones","img":"","type":"git","file":"cl13bones"},{"name":"1v1.LoL","img":"","type":"git","file":"cl1v1lol"},{"name":"2048","img":"","type":"git","file":"cl2048"},{"name":"9007188254740992","img":"","type":"git","file":"cl9007199254740992"},{"name":"A Small World Cup","img":"","type":"git","file":"clasmallworldcup"},{"name":"Agar.io Lite","img":"","type":"git","file":"clagariolite"},{"name":"Angry Birds","img":"","type":"git","file":"clangrybirds"},{"name":"Animal Crossing","img":"","type":"git","file":"clanimalcrossing"},{"name":"Aquapark.io","img":"","type":"git","file":"claquaparkio"},{"name":"Bank Robbery","img":"","type":"git","file":"clBank Robbery"},{"name":"Basket Bros","img":"","type":"git","file":"clbasketbros"},{"name":"Basket Random","img":"","type":"git","file":"clbasketrandom"},{"name":"Basket Random Good","img":"","type":"git","file":"clbasketrandomgood"},{"name":"Basket Slam Dunk 2","img":"","type":"git","file":"clbasketslamdunk2"},{"name":"Basketball Legends","img":"","type":"git","file":"clbasketballlegends(1)"},{"name":"Basketball Stars","img":"","type":"git","file":"clbasketballstars"},{"name":"Basketball Superstars","img":"","type":"git","file":"clbasketballsuperstars"},{"name":"Basketbattle","img":"","type":"git","file":"clbasketbattle"},{"name":"Batter Up","img":"","type":"git","file":"clbatterup"},{"name":"Battle Karts","img":"","type":"git","file":"clbattlekarts"},{"name":"Battles","img":"","type":"git","file":"clbattles"},{"name":"Block Blast","img":"","type":"git","file":"clblockblast"},{"name":"Bloons TD 1","img":"","type":"git","file":"clBTD1"},{"name":"Bloons TD 2","img":"","type":"git","file":"clbloonsTD2"},{"name":"Bloons TD 3","img":"","type":"git","file":"clbloonsTD3"},{"name":"Bloons TD 4","img":"","type":"git","file":"clbloonsTD4"},{"name":"Bloons TD 5","img":"","type":"git","file":"clbloonsTD5"},{"name":"BMX 2","img":"","type":"git","file":"clBMX2"},{"name":"Bonzana Bros","img":"","type":"git","file":"clBonanza-Bros"},{"name":"Brawlstars","img":"","type":"git","file":"clBrawlstars"},{"name":"Brotato","img":"","type":"git","file":"clbrotato"},{"name":"C.S 1.6","img":"","type":"git","file":"clcs16"},{"name":"Call of Duty: Modern Warfare","img":"","type":"git","file":"clcodmodernwarfare"},{"name":"Celeste","img":"","type":"git","file":"clceleste"},{"name":"Clover","img":"","type":"git","file":"clclover"},{"name":"Cookie Clicker","img":"","type":"git","file":"clcookie-clicker"},{"name":"Cookie Clicker Back-up 2","img":"","type":"git","file":"clcookieclickercool"},{"name":"Cookie Clicker Back-up 3","img":"","type":"git","file":"clcookieclickergood"},{"name":"Cookie Clicker Backup","img":"","type":"git","file":"clcookieclicker"},{"name":"Cookie Clicker with mods","img":"","type":"git","file":"clcookieclickermodmenu"},{"name":"Cooking Mama","img":"","type":"git","file":"clcookingmama"},{"name":"Cooking Mama 2","img":"","type":"git","file":"clcookingmama2"},{"name":"Doom","img":"","type":"git","file":"cldoom"},{"name":"Doom 2","img":"","type":"git","file":"cldoom2"},{"name":"Doom 2: DOS","img":"","type":"git","file":"cldoom2dos"},{"name":"Doom 2D","img":"","type":"git","file":"cldoom2d"},{"name":"Doom 2D: DOS","img":"","type":"git","file":"cldoom2dDOS"},{"name":"Eaglercraft Beta 1.3 Offline","img":"","type":"git","file":"clEaglercraft-Beta-1.3-Offline"},{"name":"Eaglercraft Indev Offline","img":"","type":"git","file":"clEaglercraft-Indev-Offline"},{"name":"Escape Road","img":"","type":"git","file":"clescaperoad"},{"name":"Escape Road 3","img":"","type":"git","file":"clescaperoad3"},{"name":"Every game","img":"","type":"git","file":"clSINGLEFILE"},{"name":"FIFA 07","img":"","type":"git","file":"clFIFA07"},{"name":"FIFA 10","img":"","type":"git","file":"clFIFA10"},{"name":"FIFA 11","img":"","type":"git","file":"clFIFA11"},{"name":"FIFA 2000","img":"","type":"git","file":"clFIFA2000(1)"},{"name":"Five Night's at Epsteins","img":"","type":"git","file":"clfivenightsatepsteins"},{"name":"Five Night's at Freddy's 2","img":"","type":"git","file":"clFNAF2"},{"name":"Five Night's at Freddy's 3","img":"","type":"git","file":"clFNAF3"},{"name":"Five Night's at Shrek's","img":"","type":"git","file":"clfivenightsatshreks"},{"name":"Five Nights at Baldi's","img":"","type":"git","file":"clfivenightsatbaldisredone"},{"name":"Five Nights at Freddy's","img":"","type":"git","file":"clFNAF"},{"name":"Five Nights at Freddy's 4","img":"","type":"git","file":"clFNAF4"},{"name":"Five Nights at Frickbears","img":"","type":"git","file":"clfivenightsatfrickbears3"},{"name":"Geometry Dash Wave","img":"","type":"git","file":"clGeometryDashWave"},{"name":"Helios","img":"","type":"git","file":"clHelios-Offline"},{"name":"Ice Dodo","img":"","type":"git","file":"clicedodo"},{"name":"Legacy of Goku","img":"","type":"git","file":"clLegacyOfGoku"},{"name":"Mario is Missing Done Right","img":"","type":"git","file":"clMarioisMissingDoneRight"},{"name":"Mario Party Advance","img":"","type":"git","file":"clMario Party Advance"},{"name":"Marvel Superheroes Arcade","img":"","type":"git","file":"clMarvelSuperHeroesArcade"},{"name":"Marvel vs Capcom PS1","img":"","type":"git","file":"clMarvelVsCapcomPS1"},{"name":"Max Payne","img":"","type":"git","file":"clmaxpayne"},{"name":"Minecraft Tower Defense","img":"","type":"git","file":"clMINECRAFTTOWERDEFENSE"},{"name":"Pinkbike","img":"","type":"git","file":"clpinkbike"},{"name":"Pokemon Emerald Rouge","img":"","type":"git","file":"clPokemonemeraldrouge"},{"name":"Pokemon Emerald Rush Edition","img":"","type":"git","file":"clPok�mon Emerald Rush Edition (20)"},{"name":"Pokemon Rocket Edition","img":"","type":"git","file":"clPokemonrocketedition"},{"name":"Pokemon Running Steel","img":"","type":"git","file":"clPok�monstunningsteel"},{"name":"Pokemon Trade & Stache","img":"","type":"git","file":"clPok�mon Trade&_Stache (V11)"},{"name":"Pokemon Two","img":"","type":"git","file":"clPok�mon TWO (v11)"},{"name":"Pou","img":"","type":"git","file":"clPou"},{"name":"Quantum Clicker","img":"","type":"git","file":"clQuantumClicker"},{"name":"Ragdoll Hit","img":"","type":"git","file":"clragdollhit"},{"name":"Redball 4","img":"","type":"git","file":"clRedBall4"},{"name":"Retro Bowl","img":"","type":"git","file":"clretrobowl"},{"name":"Retro Bowl College","img":"","type":"git","file":"clretrobowlcollege"},{"name":"Rocket Jump","img":"","type":"git","file":"clrocketjump"},{"name":"RocketGoal.io","img":"","type":"git","file":"clrocketgoalio"},{"name":"Slope","img":"","type":"git","file":"clslope"},{"name":"Slope 2 Player","img":"","type":"git","file":"clslope2player"},{"name":"Slope 3","img":"","type":"git","file":"clslope3"},{"name":"SM64 Land","img":"","type":"git","file":"clSM64Land"},{"name":"Snowbros","img":"","type":"git","file":"clsnowbros"},{"name":"Snowrider 3d","img":"","type":"git","file":"clsnowrider"},{"name":"Soccer Bros","img":"","type":"git","file":"clsoccerbros"},{"name":"Soccer Random","img":"","type":"git","file":"clsoccerrandom"},{"name":"Solar Sandbox","img":"","type":"git","file":"clsolarsandbox"},{"name":"Solar Smash","img":"","type":"git","file":"clsolarsmash"},{"name":"Stickman Hook","img":"","type":"git","file":"clstickmanhook"},{"name":"Subway Surfers: Barcelona","img":"","type":"git","file":"clsubwaysurfersbarcelona"},{"name":"Subway Surfers: Beijing","img":"","type":"git","file":"clsubwaysurfersbeijing"},{"name":"Subway Surfers: Berlin","img":"","type":"git","file":"clsubwaysurfersberlin"},{"name":"Subway Surfers: Buenos Aires","img":"","type":"git","file":"clsubwaysurfersbuenosaires"},{"name":"Subway Surfers: Havana","img":"","type":"git","file":"clsubwaysurfershavana"},{"name":"Trollface Quest","img":"","type":"git","file":"cltrollfacequest2"}];
+function s(v){const q=v.toLowerCase();document.querySelectorAll('.game-card').forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(q)?'flex':'none';});}
+document.querySelectorAll('.game-card').forEach((c,i) => {
+    c.onclick = () => {
+        const g = data[i];
+        if(g.type==='manual'){
+            const w=window.open(); w.document.write(g.code); w.document.close();
+        } else {
+            const btns = document.querySelectorAll('#sections-container input');
+            btns.forEach(b => { if(b.value === g.file) b.click(); });
+        }
+    };
+});
+</script></body></html>
